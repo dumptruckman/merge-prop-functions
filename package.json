@@ -1,6 +1,6 @@
 {
   "name": "merge-prop-functions",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "A util for merging two functions that return props objects into a single function.",
   "main": "lib/index.js",
   "scripts": {
