@@ -20,7 +20,7 @@
  * @param getAdditionalProps the props function to merge from.
  * @returns {function(...[*])} a new function that create a merged set of props.
  */
-module.exports = function mergeProps(getBaseProps, getAdditionalProps) {
+export default function(getBaseProps, getAdditionalProps) {
   if (getBaseProps && !getAdditionalProps) {
     return getBaseProps;
   } else if (!getBaseProps && getAdditionalProps) {
@@ -45,7 +45,7 @@ function isFunction(functionToCheck) {
   return functionToCheck && getType.toString.call(functionToCheck) === '[object Function]';
 }
 
-function mergeFunctions(func1, func2) {
+export function mergeFunctions(func1, func2) {
   return (...args) => {
     func1(...args);
     func2(...args);
